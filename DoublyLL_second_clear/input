@@ -1,0 +1,9 @@
+insertbeg 8
+insertbeg 10
+insertend 12
+deletebeg
+insertend 7
+insertbeg 9
+deletelast 
+insertend 5
+stop 1

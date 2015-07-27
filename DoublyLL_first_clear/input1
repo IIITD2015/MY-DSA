@@ -1,0 +1,16 @@
+createlist
+insertbeg 6 7
+insertend 8 5
+insertend 4 6
+insertbeg 9 9
+printlist 0
+deletebeg
+deletelast
+insertend 1 2
+printlist 1
+deletelist
+printlist 0
+createlist
+insertbeg 5 5
+printlist 1
+0

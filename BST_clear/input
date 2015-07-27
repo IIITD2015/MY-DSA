@@ -1,0 +1,14 @@
+2
+InitTree f
+Insert a
+Insert b
+Delete g
+Find m
+Find b
+Insert g
+Insert m
+Insert k
+Height
+PrintTree -1
+PrintTree 0
+PrintTree 1
