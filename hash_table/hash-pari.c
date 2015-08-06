@@ -27,13 +27,18 @@ struct myNode* createNode(char *name, int marks){
 	return newNode;
 }
 
+int myHashFunc(int marks, int hashSize){
+	
+	return marks%hashSize;
+}
+
 int insert(struct myHashTable hashTable[], char *name, int marks){
 
 	/* Calculating the bucketNumber, using the easiest hashFunction */
-	int hashBucket=marks%hashSize;
+	int hashBucket=myHashFunc(marks,hashSize);
 
 	/* Creating the node to be inserted */
-	struct myNode *newNode=createNode(name,marks),*temp;
+	struct myNode *newNode=createNode(name,marks);
 
 	if(!hashTable[hashBucket].first){
 		
