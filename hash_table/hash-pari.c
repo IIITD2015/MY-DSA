@@ -32,22 +32,23 @@ int insert(struct myHashTable hashTable[], char *name, int marks){
 	/* Calculating the bucketNumber, using the easiest hashFunction */
 	int hashBucket=marks%hashSize;
 
-	printf("name is %s > marks is %d and hashBucket is %d\n",name,marks,hashBucket);	
-	
 	/* Creating the node to be inserted */
 	struct myNode *newNode=createNode(name,marks),*temp;
 
 	if(!hashTable[hashBucket].first){
-		printf("Bucket is NULL, means this is the first element in the chaining.\n");
+		
+		/* Bucket is NULL, means this is the first element in the chain */
 		hashTable[hashBucket].first=newNode;	
 	}
 	else{
-		printf("Bucket is not Null, so inserting it to beginnning and updating the head value\n");
-		newNode->next=hashTable[hashBucket].first;	
+		
+		/* Bucket is not NULL, so inserting it to beginnning and updating the head value */
+		newNode->next=hashTable[hashBucket].first->next;
+		hashTable[hashBucket].first=newNode;	
 		
 	}
 
-	printf("name is %s > marks is %d and hashBucket is %d\n",hashTable[hashBucket].first->name,hashTable[hashBucket].first->marks,hashBucket);
+	printf("Name:  %s\t marks: %d\t hashBucket: %d\n",hashTable[hashBucket].first->name,hashTable[hashBucket].first->marks,hashBucket);
 	
 	return 0;
 }
@@ -80,6 +81,8 @@ int main(int argc, char *argv[]){
 
 	/* Insert operation of hashtable, is a mandatory operation */
 	FILE *fileRem=fopen(filename, "r");
+
+	printf("Fowllowing elems are inserted with their corresponding bucket number, Calculated from the hashfunction:-\n Marks mod %d \n",hashSize);
 	while(fgets(line, sizeof line, file) != NULL){
 		
 		/* Skipping the very first line, sice this is just the size of hashTable */
