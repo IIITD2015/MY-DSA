@@ -10,7 +10,7 @@ int hashSize;
 ** Structure of a node
 **/
 struct myNode{
-	char *name;
+	char name[MAX];
 	int key;
 	struct myNode *next;
 };
@@ -29,7 +29,7 @@ struct myNode* createNode(char *name, int key){
 
 	struct myNode *newNode=(struct myNode*)malloc(sizeof(struct myNode));
 	
-	newNode->name=name;
+	strcpy(newNode->name,name);
 	newNode->key=key;
 	newNode->next=NULL;
 	
@@ -64,7 +64,7 @@ int insertFunc(struct myHashTable hashTable[], char *name, int key){
 		
 		/* Bucket is not NULL, so inserting it to beginnning and updating the head value */
 		newNode->next=hashTable[hashBucket].first;
-		hashTable[hashBucket].first=newNode;	
+		hashTable[hashBucket].first=newNode;
 	}
 
 	printf("\tName:  %s\t key: %d\t hashBucket: %d\n",hashTable[hashBucket].first->name,hashTable[hashBucket].first->key,hashBucket);
@@ -76,7 +76,7 @@ int insertFunc(struct myHashTable hashTable[], char *name, int key){
 ** Function to print the hashTable
 **/   
 int printHashFunc(struct myHashTable hashTable[], int hashSize){
-	struct myNode *node=(struct myNode*)malloc(sizeof(struct myNode));
+	struct myNode *node;
 	
 	int myBucket=0;	
 	
