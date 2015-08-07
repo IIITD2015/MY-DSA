@@ -231,7 +231,7 @@ int main(int argc, char *argv[]){
 			break;
 		
 			case 2:{
-                                printHashFunc(hashTable,hashSize);
+				printHashFunc(hashTable,hashSize);
 				printf("\n\n");
                         }
                         break;
