@@ -105,8 +105,7 @@ int isFound(struct myHashTable hashTable[], int key, int hashSize){
 
 	int myBucket=myHashFunc(key, hashSize), isFound=0;
 	
-	struct myNode *node=(struct myNode*)malloc(sizeof(struct myNode));
-	node=hashTable[myBucket].first;
+	struct myNode *node=hashTable[myBucket].first;
 
 	if(!node)
 		printf("\tElement not present in this hash table.\n");
@@ -137,7 +136,11 @@ int deleteFunc(struct myHashTable hashTable[], int key, int hashSize){
 			trav=temp;
 			temp=temp->next;
 		}	
-		trav->next=temp->next;
+		
+		if(temp == trav)
+			hashTable[hashBucket].first=hashTable[hashBucket].first->next;
+		else
+			trav->next=temp->next;
 		
 		printf("\tAbout to delete the node with key: %d and name: %s\n",temp->key,temp->name);		
 
