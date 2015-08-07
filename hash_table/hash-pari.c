@@ -6,16 +6,25 @@
 
 int hashSize;
 
+/**
+** Structure of a node
+**/
 struct myNode{
 	char *name;
 	int key;
-	struct node *next;
+	struct myNode *next;
 };
 
+/**
+** Structure of hashTable
+**/   
 struct myHashTable{
 	struct myNode *first;
 };
 
+/**
+** Function to create a node, with corresponding name & key
+**/   
 struct myNode* createNode(char *name, int key){
 
 	struct myNode *newNode=(struct myNode*)malloc(sizeof(struct myNode));
@@ -27,11 +36,17 @@ struct myNode* createNode(char *name, int key){
 	return newNode;
 }
 
+/**
+** HashFunction to calculate bucket to insert node
+**/   
 int myHashFunc(int key, int hashSize){
 	
 	return key%hashSize;
 }
 
+/**
+** Function to insert node in the hashTable
+**/   
 int insertFunc(struct myHashTable hashTable[], char *name, int key){
 
 	/* Calculating the bucketNumber, using the easiest hashFunction */
@@ -48,8 +63,8 @@ int insertFunc(struct myHashTable hashTable[], char *name, int key){
 	else{
 		
 		/* Bucket is not NULL, so inserting it to beginnning and updating the head value */
-		newNode->next=hashTable[hashBucket].first->next;
-		hashTable[hashBucket].first=newNode;			
+		newNode->next=hashTable[hashBucket].first;
+		hashTable[hashBucket].first=newNode;	
 	}
 
 	printf("\tName:  %s\t key: %d\t hashBucket: %d\n",hashTable[hashBucket].first->name,hashTable[hashBucket].first->key,hashBucket);
@@ -57,41 +72,88 @@ int insertFunc(struct myHashTable hashTable[], char *name, int key){
 	return 0;
 }
 
+/**
+** Function to print the hashTable
+**/   
+int printHashFunc(struct myHashTable hashTable[], int hashSize){
+	struct myNode *node=(struct myNode*)malloc(sizeof(struct myNode));
+	
+	int myBucket=0;	
+	
+	printf("\tName \t Key \t HashBucket \n");
+	printf("\t==========================\n");
+	while(hashSize){
+	
+		node=hashTable[myBucket].first;
+		while(node!=NULL){
+			printf("\t%s \t %d\t %d\n",node->name,node->key,myBucket);
+			node=node->next;
+		}
+		
+		myBucket+=1;
+		hashSize-=1;
+	}
+	printf("\t==========================\n");
+		
+	return 0;
+}
+
+/**
+** Function to check the presence of a node
+**/   
 int isFound(struct myHashTable hashTable[], int key, int hashSize){
 
-	printf("Inside found function\n");
-	int myBucket=myHashFunc(key, hashSize);
+	int myBucket=myHashFunc(key, hashSize), isFound=0;
 	
 	struct myNode *node=(struct myNode*)malloc(sizeof(struct myNode));
 	node=hashTable[myBucket].first;
 
 	if(!node)
-		printf("Element not present in this hash table\n");
+		printf("\tElement not present in this hash table.\n");
 	else{
-		while(node->key != key && node != NULL)
-			//Problem is there in this line 
-			node->next=node->next;
-		
-		if(node->key == key){
-			printf("Found the element\n");
-			return 1;
-		}
-		else
-			printf("Elem not found\n");
+		while(node != NULL){
+			if(node->key == key)
+				isFound=1;
+			
+			node=node->next;
+		}	
 	}
-	return 0;
+	
+	return isFound;
 }
 
+/**
+** Function to delete the requested node
+**/   
 int deleteFunc(struct myHashTable hashTable[], int key, int hashSize){
 	
-	if(isFound(hashTable, key, hashSize))
-		printf("Found the element %d\n",key);
+	if(isFound(hashTable, key, hashSize)){
+		printf("\tFound the element, key: %d, going to delete the same. \n",key);
+
+		int hashBucket=myHashFunc(key, hashSize);
+		struct myNode *temp=hashTable[hashBucket].first, *trav=temp;
+
+		while(temp->key != key){
+			trav=temp;
+			temp=temp->next;
+		}	
+		trav->next=temp->next;
+		
+		printf("\tAbout to delete the node with key: %d and name: %s\n",temp->key,temp->name);		
+
+		temp=NULL;
+		free(temp);
+		printf("\tDeleted successfully.\n \n");
+	}
 	else
-		printf("Element not found\n");	
+		printf("\tElement not found\n \n");	
 
 	return 0;
 }
 
+/**
+** main function to start the execution 
+**/   
 int main(int argc, char *argv[]){
 
 	printf("\n\t"
@@ -127,7 +189,7 @@ int main(int argc, char *argv[]){
 	/* Insert operation of hashtable, is a mandatory operation */
 	FILE *fileRem=fopen(filename, "r");
 
-	printf("\tFowllowing elements are inserted with their corresponding bucket number.\n\tCalculated from the hashfunction:- Marks mod %d \n\n",hashSize);
+	printf("\tFollowing elements are inserted with their corresponding bucket number.\n\tCalculated from the hashfunction:- Marks mod %d \n\n",hashSize);
 	while(fgets(line, sizeof line, file) != NULL){
 		
 		/* Skipping the very first line, sice this is just the size of hashTable */
@@ -153,8 +215,9 @@ int main(int argc, char *argv[]){
 	do{
 		printf("\t"
 		"Please choose anyone of the options below:- \n\t"
-		"1] Delete. \n\t"
-		"2] Do you want to exit?? \n");
+		"1] Delete any element. \n\t"
+		"2] Print the hashTable. \n\t"
+		"3] Do you want to exit?? \n");
 		printf("\n\tYour option number: ");
 		scanf("%d",&userSelectedOption);
 		printf("\n");
@@ -167,7 +230,13 @@ int main(int argc, char *argv[]){
 			}
 			break;
 		
-			case 2:
+			case 2:{
+                                printHashFunc(hashTable,hashSize);
+				printf("\n\n");
+                        }
+                        break;
+	
+			case 3:
 				isExit=1;
 				break;
 			
