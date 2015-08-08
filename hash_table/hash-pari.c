@@ -91,7 +91,7 @@ int printHashFunc(struct myHashTable hashTable[], int hashSize){
 			node=node->next;
 		}
 		
-		printf("\n\n");
+		printf("NULL\n\n");
 		myBucket+=1;
 		hashSize-=1;
 	}
@@ -215,7 +215,7 @@ int main(int argc, char *argv[]){
 		}
 	}
 	fclose(fileRem);	
-	printf("\n\n");
+	printf("NULL\n\n");
 
 	do{
 		printf("\t"
