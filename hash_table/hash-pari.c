@@ -80,20 +80,21 @@ int printHashFunc(struct myHashTable hashTable[], int hashSize){
 	
 	int myBucket=0;	
 	
-	printf("\tName \t Key \t HashBucket \n");
-	printf("\t==========================\n");
+	printf("\tHash\n");
 	while(hashSize){
 	
 		node=hashTable[myBucket].first;
+	
+		printf("\t[%d]-->",myBucket);	
 		while(node!=NULL){
-			printf("\t%s \t %d\t %d\n",node->name,node->key,myBucket);
+			printf("[%s,%d]-->",node->name,node->key);
 			node=node->next;
 		}
 		
+		printf("\n\n");
 		myBucket+=1;
 		hashSize-=1;
 	}
-	printf("\t==========================\n");
 		
 	return 0;
 }
