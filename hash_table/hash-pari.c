@@ -67,7 +67,7 @@ int insertFunc(struct myHashTable hashTable[], char *name, int key){
 		hashTable[hashBucket].first=newNode;
 	}
 
-	printf("\tName:  %s\t key: %d\t hashBucket: %d\n",hashTable[hashBucket].first->name,hashTable[hashBucket].first->key,hashBucket);
+	printf("[%s,%d]-->",hashTable[hashBucket].first->name,hashTable[hashBucket].first->key);
 	
 	return 0;
 }
@@ -194,6 +194,7 @@ int main(int argc, char *argv[]){
 	FILE *fileRem=fopen(filename, "r");
 
 	printf("\tFollowing elements are inserted with their corresponding bucket number.\n\tCalculated from the hashfunction:- Marks mod %d \n\n",hashSize);
+	printf("\tHash\n\t");
 	while(fgets(line, sizeof line, file) != NULL){
 		
 		/* Skipping the very first line, sice this is just the size of hashTable */
