@@ -166,7 +166,7 @@ int main(int argc, char *argv[]){
         "(Values inserted from the mentioned input file) \n\t"
         "*********************************************** \n \n");
 		
-	char *filename=argv[1], line[MAX], *tok, *name;
+	char *filename="input", line[MAX], *tok, *name;
 	int foundHashSize=0, key, userSelectedOption, isExit=0, searchKey;
 
 	/* Just to calculate the size of HashTable */	
@@ -187,7 +187,8 @@ int main(int argc, char *argv[]){
 	struct myHashTable hashTable[hashSize];	
 	
 	/* Initializing the Bucket with NULL */
-	for(int index=0;index<hashSize;index++)
+	int index;
+	for(index=0;index<hashSize;index++)
 		hashTable[index].first=NULL;
 
 	/* Insert operation of hashtable, is a mandatory operation */
