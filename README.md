@@ -36,8 +36,9 @@ I am progressing to add more informatory lines (like a README) regarding input a
 
 Since these programs are tested with a small set of input, hence are not claimed to be run on a complex/compute intensive input. And mostly developed to give an early lessons for beginners.
 
-*Waiting to hear for feedback/concerns.*
+
+*Waiting to hear feedback/concerns.*
+ 
  
 Thanks,
-
 _Paritosh
