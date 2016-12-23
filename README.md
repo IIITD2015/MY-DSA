@@ -22,9 +22,21 @@ For example, the BST directory contains the following files:
                   
     BST.h
     BST.c
-    INPUT
+    InputFile
 
-Now Std instructions to run a program is as follows:
+And Std instructions to run the above mentioned program(Unless mentioned otherwise) is as follows, after compiling it using gcc:
 
+    ./a.out InputFile
 
-I am progressing to give more explaination about the Input and Operations done by the programs. Since these programs are tested with a small set of input, hence they are not claimed to be run on a complex or compute intensive input. And mostly developed to give an early lessons for beginners.
+**Note:** All programs except spell-checker are done tested successfully. There might be failure due to Big Input file(Scalability has not been tested yet).
+
+## Conclusion
+
+I am progressing to add more informatory comments regarding Input and Operations done by the programs. 
+
+Since these programs are tested with a small set of input, hence they are not claimed to be run on a complex/compute  intensive input. And mostly developed to give an early lessons for beginners.
+
+*Waiting to hear for feedback/concerns.*
+ 
+Thanks,
+Paritosh
