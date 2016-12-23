@@ -3,7 +3,9 @@
 
 ## Overview
 
-This repository as the name suggests contains, the variety of *Data Structures*, keeping in mind the *Computer science students and  & programming users*. There are bunch of programs implemented using *'C'* programming language, and are developed by keeping in mind the  *modularity,  maintanability  and  readability* aspects for beginners.
+This repository as the name suggests contains, the variety of *Data Structures*, keeping in mind the *Computer science students & naive programming users*. 
+
+   There are bunch of programs implemented using *'C'* programming language, and are developed by keeping in mind the  *modularity,  maintanability  and  readability* aspects for beginners.
 
 ## Usage
 
