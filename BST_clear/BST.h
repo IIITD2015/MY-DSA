@@ -1,6 +1,6 @@
 /**
  * Header file for Binary search tree
-pari is  a bed guy */
+ */
 #include"stdio.h"
 #include"string.h"
 #include"ctype.h"
