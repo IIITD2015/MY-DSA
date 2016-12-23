@@ -1,5 +1,5 @@
 # Data Structures for Beginners
-An early guide to DS     
+> An early guide to DS     
 
 ## Overview
 
