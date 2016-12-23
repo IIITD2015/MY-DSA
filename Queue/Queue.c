@@ -39,7 +39,7 @@ int main(){
 
 		switch(selectedoption){
        			case 1:{
-       				printf("enter the quene element/n");
+       				printf("enter the queue element/n");
       	 			scanf("%d",&item);
        				push(arr1[ ],item);
 			}
@@ -54,14 +54,14 @@ int main(){
 				
 				while(!isEmpty(aar2)){
    					item=pop(arr2[ ]);
-      					printf("/t/n/ the element dequene is %d",item);
+      					printf("/t/n/ the element dequeue is %d",item);
 				}
 			}
 			break;
       
 			case 3:{
       				if(top==-1)
-      					printf("/t/n/quene is empty");
+      					printf("/t/n/queue is empty");
  			}break;
 		}
 	} 
