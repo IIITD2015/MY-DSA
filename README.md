@@ -11,9 +11,9 @@ Programming implementations are done using *C*, by keeping in mind the aspect of
 
 The developed programs belong to a category of basic data structures like *array*, *stack* and *queue* etc. A few of them gives fair idea of some of the complex data structures (like *tree*, *graph*, *hashtable*, *dictionary* etc). 
 
-Programs represents a control flow from:
+Programs represent a control flow as:
 
-Input file -> Parsing -> Applying chosen option -> Console output. 
+      Input file -> Parsing -> Applying chosen option -> Console output 
 
 Programs are named to represent an intuitive understanding about themselves, and are kept in the related directories(Vig BST contains program for Binary-Search-Tree), with having a sample input file in the same directory path.
 
