@@ -40,5 +40,4 @@ Since these programs are tested with a small set of input, hence are not claimed
 *Waiting to hear feedback/concerns.*
  
  
-Thanks,
-_Paritosh
+_Paritosh (Parit)
