@@ -9,7 +9,7 @@ Programming implementations are done using *C*, by keeping in mind the aspect of
 
 ## Usage
 
-The developed programs belong to a category of basic data structures like array, stack and queue etc. A few of them corresponds to category of complex structures like tree, graph, hashtable, dictionary etc. 
+The developed programs belong to a category of basic data structures like *array*, *stack* and *queue* etc. A few of them gives fair idea of some of the complex data structures (like *tree*, *graph*, *hashtable*, *dictionary* etc). 
 
 Programs represents a control flow from:
 
