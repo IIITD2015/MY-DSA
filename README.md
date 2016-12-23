@@ -16,27 +16,28 @@ Programs represent a control flow as:
     Input file -> Parsing -> Applying chosen option -> Console output 
 
 
-Programs are named to represent an intuitive understanding about themselves, and are kept in the related directories(Vig BST contains program for Binary-Search-Tree). Supplied sample input file(in the same directory path) helps to verify the output. 
+Programs are named to represent an intuitive understanding about themselves, and are kept in the related directories (Vig. BST contains program for Binary-Search-Tree). Supplied sample input file (in the same directory path) helps to verify the output. 
 
-For example, the BST directory contains the following files:
+For example, the *BST* directory contains the following files:
                   
     BST.h
     BST.c
     InputFile
 
-And Std instructions to run the above mentioned program(Unless mentioned otherwise) is as follows, after compiling it using gcc:
+And Std instruction (unless mentioned otherwise) to run the above mentioned program (after compiling it using *gcc*) is as follows:
 
     ./a.out InputFile
 
-**Note:** All programs except spell-checker are done tested successfully. There might be failure due to Big Input file(Scalability has not been tested yet).
+**Note:** All programs except spell-checker are done tested successfully. There might be failure due to Big Input file (Scalability has not been tested yet).
 
 ## Conclusion
 
-I am progressing to add more informatory comments regarding Input and Operations done by the programs. 
+I am progressing to add more informatory lines (like a README) regarding input and operations used in programs. 
 
-Since these programs are tested with a small set of input, hence they are not claimed to be run on a complex/compute  intensive input. And mostly developed to give an early lessons for beginners.
+Since these programs are tested with a small set of input, hence are not claimed to be run on a complex/compute intensive input. And mostly developed to give an early lessons for beginners.
 
 *Waiting to hear for feedback/concerns.*
  
 Thanks,
-Paritosh
+
+_Paritosh
