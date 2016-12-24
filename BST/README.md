@@ -1,7 +1,7 @@
 # Binary Search Tree 
 **Reference** [ https://en.wikipedia.org/wiki/Binary_search_tree ]
 
-## Actions on Binary Search Tree 
+## Actions on Binary Search Tree (used in InputFileBST)
 
 **InitTree A :** Initialize BST with *A*
 
