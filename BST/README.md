@@ -2,26 +2,19 @@
 
 Input file contains some actions on Binary Search Tree. Description of those actions are as follows:
 
-- InitTree f
-Initialize BST with 'f' as root.
+**InitTree A :** Initialize BST with *A*
 
-- Insert a
-Insert 'a' as BST node
+**Insert A :** Insert *A* as BST node
 
-- Delete g 
-Delete 'g' from BST
+**Delete A :** Delete *A* from BST
 
-- Find m
-Find if 'm' is part of BST
+**Find A :** Find if *A* is part of BST
 
-- Height
-Print Height of the BST
+**Height :** Print Height of the BST
 
-- PrintTree -1
-Print PreOrder traversal
+**PrintTree -1/0/1 :**
+> **-1** -> Print *preorder* traversal
 
-- PrintTre 0
-Print InOrder traversal
+> **0** -> Print *inorder* traversal
 
-- PrintTree 1
-Print 
+> **1** -> Print *postorder* traversal
