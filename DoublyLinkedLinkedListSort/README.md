@@ -3,17 +3,15 @@
 
 ## Actions on Doubly Linked List (used in InputFileDLL)
 
-**insertbeg A :** Initialize BST with *A*
+**insertbeg A :** Insert *A* at beginning of the linked list
 
-**insertend A :** Insert *A* as BST node
+**insertend A :** Insert *A* at end of the linked list
 
-**deletebeg :** Delete *A* from BST
+**deletebeg :** Delete the first element of the linked list
 
-**deletelast :** Find if *A* is part of BST
+**deletelast :** Delete the last element of the linked list
 
-**stop -1/0/1 :**
-> **-1** -> Print *preorder* traversal
+**stop 0/1 :**
+> **0** -> Print ascendingly *sorted* list
 
-> **0** -> Print *inorder* traversal
-
-> **1** -> Print *postorder* traversal
+> **1** -> Print descendingly *sorted* list
