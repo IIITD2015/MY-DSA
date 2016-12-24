@@ -12,6 +12,6 @@
 **deletelast :** Delete the last element of the linked list
 
 **stop 0/1 :**
-> **0** -> Print ascendingly *sorted* list
+> **0** -> Print *ascendingly sorted* list
 
-> **1** -> Print descendingly *sorted* list
+> **1** -> Print *descendingly sorted* list
