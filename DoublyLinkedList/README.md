@@ -3,15 +3,17 @@
 
 ## Actions on Doubly Linked List (used in InputFileDLL)
 
-**insertbeg A :** Insert *A* at beginning of the linked list
+**insertbeg A B :** Insert *A B* at beginning of the linked list
 
-**insertend A :** Insert *A* at end of the linked list
+**insertend A B :** Insert *A B* at end of the linked list
 
 **deletebeg :** Delete the first element of the linked list
 
 **deletelast :** Delete the last element of the linked list
 
-**stop 0/1 :**
-> **0** -> Print *ascendingly sorted* list
+**deletelist :** Delete the whole linked list
 
-> **1** -> Print *descendingly sorted* list
+**printlist 0/1 :**
+> **0** -> Print list
+ 
+> **1** -> Print list reversely
