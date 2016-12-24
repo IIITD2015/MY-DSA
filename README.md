@@ -3,7 +3,7 @@
 
 ## Overview
 
-Repository as the name suggests contains, the variety of *Data Structures*, keeping in mind the *Computer science students & naive programming users*. 
+Repository as the name suggests contains, the variety of *Data Structures*, keeping in mind the *Computer science students & naive programmers*. 
 
 Programming implementations are done using *C*, by keeping in mind the aspect of *modularity* and *readability*.
 
